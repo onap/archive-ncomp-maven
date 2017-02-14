@@ -1,0 +1,65 @@
+
+/*-
+ * ============LICENSE_START==========================================
+ * OPENECOMP - DCAE
+ * ===================================================================
+ * Copyright (c) 2017 AT&T Intellectual Property. All rights reserved.
+ * ===================================================================
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *        http://www.apache.org/licenses/LICENSE-2.0 
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ * ============LICENSE_END============================================
+ */
+	
+@GenModel(modelDirectory="/NCOMPNAME-PPPP-model/src/main/xcore-gen")
+
+
+package NCOMPBASE.SSSS.service
+
+
+import org.openecomp.ncomp.core.IncreasingULongMetricAttribute
+import org.openecomp.dcae.controller.service.cdap.CdapService
+import org.openecomp.dcae.controller.service.cdap.CdapServiceInstance 
+import org.openecomp.ncomp.core.NamedEntity 
+
+annotation "http://openecomp.org" as ecomp
+
+class AAAAService extends CdapService {    
+	op String hello_service(String instanceName, String str)  
+	op void restart(String instanceName)    
+} 
+
+// state in the controller
+class AAAAServiceInstance extends CdapServiceInstance, AAAAServiceConfiguration {
+}
+
+// state in both controller and manager
+class AAAAServiceConfiguration { 
+	@ecomp(^type = "configuration")
+	String cdapUrl
+	@ecomp(^type = "operational")
+	IncreasingULongMetricAttribute numberOfCdapRecords
+	@ecomp(^type = "operational")
+	IncreasingULongMetricAttribute numberOfCdapErrors
+	@ecomp(^type = "configuration")
+	contains ContrailController[] localControllers
+}
+
+class ContrailController extends NamedEntity {
+	@ecomp(^type = "configuration")
+	String contailIp
+	@ecomp(^type = "operational")
+	IncreasingULongMetricAttribute numberOfRecords
+	@ecomp(^type = "operational")
+	IncreasingULongMetricAttribute numberOfErrors
+}
+
+

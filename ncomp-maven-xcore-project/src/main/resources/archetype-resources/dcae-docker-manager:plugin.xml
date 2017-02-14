@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated service -->
+      <package
+            uri="NCOMPBASE.SSSS.service"
+            class="NCOMPBASE.SSSS.service.ServicePackage"
+            genModel="src/main/xcore/service.xcore"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated manager -->
+      <package
+            uri="NCOMPBASE.SSSS.manager"
+            class="NCOMPBASE.SSSS.manager.ManagerPackage"
+            genModel="src/main/xcore/manager.xcore"/>
+   </extension>
+
+</plugin>

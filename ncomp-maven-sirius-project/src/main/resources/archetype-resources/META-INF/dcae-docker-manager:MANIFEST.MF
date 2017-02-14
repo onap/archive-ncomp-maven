@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: NCOMPNAME-PPPP-QQQQ
+Bundle-SymbolicName: NCOMPNAME-PPPP-QQQQ
+Bundle-Version: 0.1.0.qualifier
+Export-Package: NCOMPBASE.SSSS.TTTT.tools,
+  NCOMPBASE.SSSS.servers.TTTT
+Require-Bundle: ncomp-core-types,
+ ncomp-sirius-manager-model,
+ ncomp-sirius-manager-server,
+ ncomp-sirius-manager-console,
+ ncomp-sirius-manager-generator,
+ NCOMPNAME-PPPP-model;bundle-version="0.1.0",
+ ncomp-utils-java;bundle-version="0.1.0"

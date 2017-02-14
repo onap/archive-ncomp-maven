@@ -1,0 +1,23 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>GNAMEEEE</groupId>
+	<artifactId>NCOMPNAME-PPPP-model</artifactId>
+	<parent>
+		<groupId>org.openecomp.ncomp.maven</groupId>
+		<artifactId>ncomp-maven-xcore</artifactId>
+		<version>0.1.0-SNAPSHOT</version>
+	</parent>
+	<dependencies>
+		<dependency>
+			<groupId>org.openecomp.ncomp.sirius.manager</groupId>
+			<artifactId>ncomp-sirius-manager-model</artifactId>
+			<version>0.1.0-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>org.openecomp.dcae.controller</groupId>
+			<artifactId>dcae-controller-service-vm-model</artifactId>
+			<version>0.1.0-SNAPSHOT</version>
+		</dependency>
+	</dependencies>
+</project>
