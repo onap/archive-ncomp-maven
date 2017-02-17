@@ -70,23 +70,23 @@
 	</build>
 
 
-	
-		<distributionManagement>
-			<repository>
-				<id>osecomp-nexus-releases</id>
-				<name>OSECOMP Release Repository</name>
-				<url>${openecomp.nexus.releases}</url>
-			</repository>
-			<snapshotRepository>
-				<id>osecomp-nexus-snapshots</id>
-				<name>OSECOMP Snapshot Repository</name>
-				<url>${openecomp.nexus.snapshots}</url>
-			</snapshotRepository>
-			<site>
-				<id>dcae-javadoc</id>
-				<url>${site.urlroot}/${project.artifactId}/${project.version}/</url>
-			</site>
-		</distributionManagement>
+
+	<distributionManagement>
+		<repository>
+			<id>ecomp-releases</id>
+			<name>OpenECOMP Release Repository</name>
+			<url>${openecomp.nexus.releases}</url>
+		</repository>
+		<snapshotRepository>
+			<id>ecomp-snapshots</id>
+			<name>OpenECOMP Snapshot Repository</name>
+			<url>${openecomp.nexus.snapshots}</url>
+		</snapshotRepository>
+		<site>
+			<id>dcae-javadoc</id>
+			<url>${site.urlroot}/${project.artifactId}/${project.version}/</url>
+		</site>
+	</distributionManagement>
 	
    <reporting>
         <plugins>
