@@ -4,7 +4,7 @@
 
   <groupId>GNAMEEEE</groupId>
   <artifactId>PPPP</artifactId>
-  <version>1.0.0-SNAPSHOT</version> 
+  <version>1.1.0-SNAPSHOT</version> 
   <packaging>pom</packaging>
   <name>PPPP</name>
 
@@ -19,7 +19,7 @@
 	  <parent>
 	        <groupId>org.openecomp.ncomp.maven</groupId>
 	        <artifactId>ncomp-maven-base</artifactId>
-	        <version>1.0.0-SNAPSHOT</version>
+	        <version>1.1.0-SNAPSHOT</version>
 			<relativePath>../../dcae-org.openecomp.ncomp.maven/ncomp-maven-base</relativePath>
 	  </parent>
 </project>
