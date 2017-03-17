@@ -45,12 +45,13 @@ public class Generator {
 		String dir = p.getNsURI().replaceAll(p.getNsPrefix()+'$',"") + "servers." + p.getNsPrefix();
 		dir= "src/main/sirius-gen/" + dir.replace('.', '/');
 		ControllerModel m = ControllermodelFactory.eINSTANCE.createControllerModel();
-		m.setTemplateDirectory("../../dcae-org.openecomp.ncomp.sirius.manager/ncomp-sirius-manager-generator/src/main/templates");
+		m.setTemplateDirectory("../../ncomp.sirius.manager/ncomp-sirius-manager-generator/src/main/templates");
 		m.setPrefix("PREFIXXXX");
 		m.setPluginName(p.getNsURI());
 		m.setName("AAAA");
 		m.setTitle("AAAA");
 		ControllerGenerator g = new ControllerGenerator(o,m); 
+		g.setVersion("ONAP-R2");
 		g.setEnableIRequestHandler(false);
 		g.setEnableISiriusPlugin(false);
 		EObject gui = ModelFactory.eINSTANCE.createGuiClientApi();
