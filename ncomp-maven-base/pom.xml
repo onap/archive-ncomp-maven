@@ -63,8 +63,8 @@
 			<url>${openecomp.nexus.snapshots}</url>
 		</snapshotRepository>
 		<site>
-			<id>dcae-javadoc</id>
-			<url>dav:${nexusproxy}/content/sites/site/org/openecomp/dcae/${project.groupId}/${project.artifactId}/${project.version}/</url>
+			<id>ecomp-site</id>
+			<url>dav:${nexusproxy}/content/sites/site/org/openecomp/ncomp/maven/${project.artifactId}/${project.version}/</url>
 		</site>
 	</distributionManagement>
 	
