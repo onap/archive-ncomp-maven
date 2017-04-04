@@ -1,5 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<?xml version="1.0"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.openecomp.ncomp.maven</groupId>
 	<artifactId>ncomp-maven-base</artifactId>
@@ -15,7 +15,7 @@
 		<openecomp.nexus.proxy>https://nexus.onap.org</openecomp.nexus.proxy>
 		<openecomp.nexus.staging.serverId>ecomp-staging</openecomp.nexus.staging.serverId>
 		<openecomp.nexus.staging.profileId>176c31dfe190a</openecomp.nexus.staging.profileId>
-	</properties>
+	<nexusproxy>https://nexus.onap.org</nexusproxy></properties>
 
 	
 <build>
@@ -64,7 +64,7 @@
 		</snapshotRepository>
 		<site>
 			<id>dcae-javadoc</id>
-			<url>${site.urlroot}/${project.artifactId}/${project.version}/</url>
+			<url>dav:${nexusproxy}/content/sites/site/org/openecomp/dcae/${project.groupId}/${project.artifactId}/${project.version}/</url>
 		</site>
 	</distributionManagement>
 	
