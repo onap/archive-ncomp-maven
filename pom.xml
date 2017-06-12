@@ -8,9 +8,6 @@
 
 
 
-
-
-
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.target>1.7</maven.compiler.target>
@@ -25,9 +22,6 @@
 		<site.urlroot>dav:${nexusproxy}</site.urlroot>
 		<site.url>${site.urlroot}/${site.path}/</site.url>
 	</properties>
-
-
-
 
 
 
@@ -82,7 +76,7 @@
 			</snapshotRepository>
 			<site>
 				<id>ecomp-site</id>
-			<url>${site.url}</url>
+				<url>${site.url}</url>
 			</site>
 		</distributionManagement>
 	
